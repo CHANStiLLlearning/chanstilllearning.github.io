@@ -298,6 +298,52 @@ function renderInflationTable(initialAmount, rate, totalYears) {
   tbody.innerHTML = rowsHtml;
 }
 
+/* ==========================================================================
+   6. Auto Loan & Financing Calculator
+   ========================================================================== */
+function calculateAutoLoan() {
+  const price = parseFloat(document.getElementById("auto-price")?.value) || 0;
+  const downPayment = parseFloat(document.getElementById("auto-down")?.value) || 0;
+  const tradeIn = parseFloat(document.getElementById("auto-tradein")?.value) || 0;
+  const taxRate = (parseFloat(document.getElementById("auto-tax")?.value) || 0) / 100;
+  const annualRate = (parseFloat(document.getElementById("auto-rate")?.value) || 0) / 100;
+  const termMonths = parseInt(document.getElementById("auto-term")?.value) || 60;
+
+  if (price <= 0 || termMonths <= 0) return;
+
+  const taxableAmount = Math.max(0, price - tradeIn);
+  const totalTax = taxableAmount * taxRate;
+  const totalToFinance = Math.max(0, price + totalTax - downPayment - tradeIn);
+
+  const monthlyRate = annualRate / 12;
+  let monthlyPayment = 0;
+
+  if (monthlyRate === 0) {
+    monthlyPayment = totalToFinance / termMonths;
+  } else {
+    monthlyPayment =
+      (totalToFinance * (monthlyRate * Math.pow(1 + monthlyRate, termMonths))) /
+      (Math.pow(1 + monthlyRate, termMonths) - 1);
+  }
+
+  const totalPayments = monthlyPayment * termMonths;
+  const totalInterest = Math.max(0, totalPayments - totalToFinance);
+  const totalCost = downPayment + tradeIn + totalPayments;
+
+  // Update DOM
+  const paymentEl = document.getElementById("auto-monthly-payment");
+  const principalEl = document.getElementById("auto-principal");
+  const interestEl = document.getElementById("auto-interest");
+  const taxEl = document.getElementById("auto-tax-amount");
+  const totalCostEl = document.getElementById("auto-total-cost");
+
+  if (paymentEl) paymentEl.textContent = formatCurrency(monthlyPayment);
+  if (principalEl) principalEl.textContent = formatCurrency(totalToFinance);
+  if (interestEl) interestEl.textContent = formatCurrency(totalInterest);
+  if (taxEl) taxEl.textContent = formatCurrency(totalTax);
+  if (totalCostEl) totalCostEl.textContent = formatCurrency(totalCost);
+}
+
 // Global Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   // Bind Compound Interest
@@ -338,5 +384,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el) el.addEventListener("input", calculateInflation);
   });
   if (document.getElementById("inf-amount")) calculateInflation();
+
+  // Bind Auto Loan
+  const autoInputs = ["auto-price", "auto-down", "auto-tradein", "auto-tax", "auto-rate", "auto-term"];
+  autoInputs.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", calculateAutoLoan);
+  });
+  if (document.getElementById("auto-price")) calculateAutoLoan();
 });
 

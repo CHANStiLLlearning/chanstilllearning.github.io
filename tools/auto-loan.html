@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Loan & Car Payment Calculator | FinWise</title>
+  <meta name="description" content="Calculate your exact monthly car loan payment, total interest charges, taxes, and trade-in deduction with our free auto financing calculator.">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="Auto Loan & Car Payment Calculator | FinWise">
+  <meta property="og:description" content="Calculate your monthly car payment, total financing charges, sales tax, and trade-in deduction.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chanstilllearning.github.io/finwise/tools/auto-loan.html">
+
+  <!-- Schema.org Structured Data (Google Rich Snippets & FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "FinWise Auto Loan Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the 20/4/10 rule for car buying?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 20/4/10 rule states you should put down at least 20%, finance the vehicle for no more than 4 years (48 months), and keep total vehicle expenses (payment, insurance, fuel) under 10% of your gross income."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a trade-in reduce sales tax on a car purchase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In most states and jurisdictions, your trade-in value is subtracted from the vehicle purchase price before calculating sales tax, reducing your total tax liability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are 72 or 84-month auto loans risky?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Long-term loans lower the monthly payment but dramatically increase total interest paid and cause you to be 'underwater' (owing more than the car is worth) for years."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-badge">FW</span> FinWise
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="loan-calculator.html">Loan / EMI</a></li>
+          <li><a href="auto-loan.html" class="active">Auto Loan</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="inflation-calc.html">Inflation</a></li>
+          <li><a href="../blog/index.html">Guides</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Banner Ad Slot -->
+  <div class="container ad-slot-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-placeholder">
+      <span>Google AdSense Responsive Banner Slot (Header Top)</span>
+      <code>&lt;ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-bottom: 3rem;">
+    <div class="section-header">
+      <span class="hero-pill">🚗 Vehicle Financing</span>
+      <h1>Auto Loan &amp; Car Payment Calculator</h1>
+      <p>Estimate your monthly installment, total interest paid, dealer sales taxes, and trade-in value impact.</p>
+    </div>
+
+    <!-- Calculator App -->
+    <div class="calc-wrapper">
+      
+      <!-- Inputs -->
+      <div class="calc-inputs">
+        <div class="form-group">
+          <label for="auto-price">Vehicle Purchase Price ($) <span class="hint">MSRP or negotiated price</span></label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="auto-price" value="32000" min="1000" step="500">
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="form-group">
+            <label for="auto-down">Down Payment ($)</label>
+            <div class="input-with-symbol">
+              <span class="symbol">$</span>
+              <input type="number" id="auto-down" value="5000" min="0" step="250">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="auto-tradein">Trade-in Value ($)</label>
+            <div class="input-with-symbol">
+              <span class="symbol">$</span>
+              <input type="number" id="auto-tradein" value="2500" min="0" step="250">
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="form-group">
+            <label for="auto-tax">Sales Tax Rate (%)</label>
+            <input type="number" id="auto-tax" value="6.5" min="0" max="20" step="0.1">
+          </div>
+          <div class="form-group">
+            <label for="auto-rate">Interest Rate (APR %)</label>
+            <input type="number" id="auto-rate" value="6.2" min="0.1" max="30" step="0.1">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="auto-term">Loan Term</label>
+          <select id="auto-term">
+            <option value="36">36 Months (3 Years - Lowest interest)</option>
+            <option value="48">48 Months (4 Years - Balanced)</option>
+            <option value="60" selected>60 Months (5 Years - Standard)</option>
+            <option value="72">72 Months (6 Years)</option>
+            <option value="84">84 Months (7 Years)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Results Display -->
+      <div class="calc-results">
+        <div>
+          <div class="result-main">
+            <div class="label">Monthly Car Payment</div>
+            <div class="amount" id="auto-monthly-payment" style="color:var(--primary);">$512</div>
+          </div>
+
+          <div class="result-breakdown">
+            <div class="breakdown-row">
+              <span>Total Financed Loan Amount:</span>
+              <strong id="auto-principal">$26,418</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Estimated Sales Tax:</span>
+              <strong id="auto-tax-amount">$1,918</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Total Lifetime Financing Interest:</span>
+              <strong id="auto-interest" style="color:#dc2626;">$4,312</strong>
+            </div>
+            <div class="breakdown-row" style="border-top:1px solid var(--border); padding-top:0.5rem; margin-top:0.25rem;">
+              <span>Total Out-of-Pocket Vehicle Cost:</span>
+              <strong id="auto-total-cost">$38,230</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding: 0.85rem; background:#fff; border-radius:6px; border:1px solid var(--border); font-size:0.85rem; color:var(--text-muted);">
+          💡 <strong>Car Buyer Tip:</strong> Putting an extra $1,000 down upfront cuts your monthly installment and saves hundreds in compounding finance interest.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- In-Content Native Ad Slot -->
+    <div class="ad-slot-wrapper">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-placeholder">
+        <span>Google AdSense In-Article Native Ad Slot</span>
+        <code>&lt;ins class="adsbygoogle" data-ad-layout="in-article" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+      </div>
+    </div>
+
+    <!-- Educational Deep Dive -->
+    <section class="prose" style="max-width:100%; margin-top: 2rem;">
+      <h2>Smart Rules for Financing Your Next Vehicle</h2>
+      <p>Automobile purchases represent one of the fastest depreciating assets the average consumer purchases. A brand-new car loses roughly 20% of its market value in year one and approximately 15% each subsequent year.</p>
+
+      <h3>The 20/4/10 Rule of Thumb</h3>
+      <p>Financial planners frequently recommend the <strong>20/4/10 framework</strong> to protect yourself from becoming car-poor:</p>
+      <ul>
+        <li><strong>20% Down Payment:</strong> Protects you from negative equity ("underwater" on your loan) as soon as you drive off the lot.</li>
+        <li><strong>4-Year Maximum Loan Term:</strong> Never finance a depreciating car for 72 or 84 months. If you cannot afford the 48-month payment, the car is too expensive for your current budget.</li>
+        <li><strong>10% Total Transportation Cap:</strong> Your loan payment, insurance premium, and fuel should consume less than 10% of your gross monthly income.</li>
+      </ul>
+
+      <h3>Dealer Financing vs. Credit Union Pre-Approval</h3>
+      <p>Before stepping onto a dealership lot, always seek pre-approval from a local credit union or online bank. Dealers often mark up financing interest rates by 1.5% to 2.5% as pure profit. Walking in with a pre-approved interest rate forces the dealership to match or beat your outside offer.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:#fff;">
+            <span class="logo-badge">FW</span> FinWise
+          </div>
+          <p>Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="compound-interest.html">Compound Interest</a></li>
+            <li><a href="loan-calculator.html">Loan & Mortgage EMI</a></li>
+            <li><a href="auto-loan.html">Auto Loan Calculator</a></li>
+            <li><a href="budget-planner.html">50/30/20 Budget</a></li>
+            <li><a href="retirement-calc.html">Retirement & FIRE</a></li>
+            <li><a href="inflation-calc.html">Inflation Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../blog/index.html">All Guides</a></li>
+            <li><a href="../blog/compound-interest-guide.html">Compound Interest Guide</a></li>
+            <li><a href="../blog/debt-payoff-strategies.html">Debt Payoff Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Trust</h4>
+          <ul>
+            <li><a href="../pages/about.html">About Us</a></li>
+            <li><a href="../pages/contact.html">Contact Us</a></li>
+            <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../pages/terms.html">Terms of Service</a></li>
+            <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> FinWise. All rights reserved.</p>
+        <p>Disclaimer: Financial calculators and guides are for educational purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
