@@ -1,0 +1,7 @@
+# Environment & temp files
+.playwright-mcp/
+node_modules/
+*.log
+screenshot*.png
+.DS_Store
+Thumbs.db

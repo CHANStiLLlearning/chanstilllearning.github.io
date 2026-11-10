@@ -1,0 +1,11 @@
+{
+  "name": "finwise-adsense-portal",
+  "version": "1.0.0",
+  "description": "High-performing financial calculators and wealth guides built for Google AdSense monetization.",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "open": "start http://localhost:8080"
+  },
+  "author": "FinWise Team",
+  "license": "MIT"
+}
