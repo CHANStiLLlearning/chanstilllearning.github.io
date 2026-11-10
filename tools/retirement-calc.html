@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement & FIRE Calculator | FinWise</title>
+  <meta name="description" content="Calculate your retirement nest egg and FIRE (Financial Independence, Retire Early) number using the 4% safe withdrawal rule.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-badge">FW</span> FinWise
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="loan-calculator.html">Loan / EMI</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="../blog/index.html">Guides</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Banner Ad Slot -->
+  <div class="container ad-slot-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-placeholder">
+      <span>Google AdSense Responsive Banner Slot (Header Top)</span>
+      <code>&lt;ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-bottom: 3rem;">
+    <div class="section-header">
+      <span class="hero-pill">⚡ Free Financial Utility</span>
+      <h1>Retirement &amp; FIRE Calculator</h1>
+      <p>Estimate when you can achieve Financial Independence and retire based on your annual spending and nest egg accumulation.</p>
+    </div>
+
+    <!-- Calculator App -->
+    <div class="calc-wrapper">
+      
+      <!-- Inputs -->
+      <div class="calc-inputs">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="form-group">
+            <label for="fire-age">Current Age</label>
+            <input type="number" id="fire-age" value="30" min="18" max="80">
+          </div>
+          <div class="form-group">
+            <label for="fire-retire-age">Target Retirement Age</label>
+            <input type="number" id="fire-retire-age" value="55" min="25" max="90">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="fire-savings">Current Retirement Savings ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="fire-savings" value="25000" min="0" step="1000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="fire-monthly">Monthly Savings Contribution ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="fire-monthly" value="800" min="50" step="50">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="fire-return">Estimated Annual Return (%) <span class="hint">After inflation ~6-7%</span></label>
+          <input type="number" id="fire-return" value="7.0" min="1" max="15" step="0.5">
+        </div>
+
+        <div class="form-group">
+          <label for="fire-expenses">Estimated Annual Living Expenses in Retirement ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="fire-expenses" value="48000" min="10000" step="1000">
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Display -->
+      <div class="calc-results">
+        <div>
+          <div class="result-main">
+            <div class="label">Projected Nest Egg at Age 55</div>
+            <div class="amount" id="fire-nest-egg">$783,165</div>
+          </div>
+
+          <div class="result-breakdown">
+            <div class="breakdown-row">
+              <span>Required Target Nest Egg (Rule of 25):</span>
+              <strong id="fire-target">$1,200,000</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Safe Annual Withdrawal (4% Rule):</span>
+              <strong id="fire-safe-income" style="color:var(--secondary);">$31,327 / year</strong>
+            </div>
+          </div>
+        </div>
+
+        <div id="fire-status" style="margin-top: 1.5rem; padding: 0.85rem; background:#fff; border-radius:6px; border:1px solid var(--border); font-size:0.9rem;">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Educational Deep Dive -->
+    <section class="prose" style="max-width:100%; margin-top: 2rem;">
+      <h2>Understanding the FIRE Movement and the 4% Rule</h2>
+      <p>FIRE stands for <strong>Financial Independence, Retire Early</strong>. The foundational principle of FIRE is that once your invested assets can generate sufficient passive income to cover your living expenses for the rest of your life, working becomes optional.</p>
+
+      <h3>The Trinity Study &amp; The 4% Rule</h3>
+      <p>Based on historical stock and bond performance over 30-year horizons, the Trinity Study concluded that an investor who withdraws 4% of their initial portfolio value in year one (adjusted annually for inflation) has a 95%+ probability of never running out of money.</p>
+
+      <h3>How to Find Your FIRE Number (Rule of 25)</h3>
+      <div class="callout">
+        <strong>The Math:</strong>
+        <code>Your Target Portfolio = Desired Annual Living Expenses × 25</code>
+        <br><br>
+        For instance, if you want to spend <strong>$40,000</strong> per year in retirement:
+        <br>
+        <code>$40,000 × 25 = $1,000,000 Nest Egg</code>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:#fff;">
+            <span class="logo-badge">FW</span> FinWise
+          </div>
+          <p>Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="compound-interest.html">Compound Interest</a></li>
+            <li><a href="loan-calculator.html">Loan & Mortgage EMI</a></li>
+            <li><a href="budget-planner.html">50/30/20 Budget</a></li>
+            <li><a href="retirement-calc.html">Retirement & FIRE</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../blog/index.html">All Guides</a></li>
+            <li><a href="../blog/compound-interest-guide.html">Compound Interest Guide</a></li>
+            <li><a href="../blog/debt-payoff-strategies.html">Debt Payoff Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Trust</h4>
+          <ul>
+            <li><a href="../pages/about.html">About Us</a></li>
+            <li><a href="../pages/contact.html">Contact Us</a></li>
+            <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../pages/terms.html">Terms of Service</a></li>
+            <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> FinWise. All rights reserved.</p>
+        <p>Disclaimer: Financial calculators and guides are for educational purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
+

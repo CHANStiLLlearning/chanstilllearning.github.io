@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50/30/20 Budget Rule Calculator | FinWise</title>
+  <meta name="description" content="Calculate your 50/30/20 monthly budget breakdown: Needs, Wants, and Savings. Learn how to manage your cash flow effectively.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-badge">FW</span> FinWise
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="loan-calculator.html">Loan / EMI</a></li>
+          <li><a href="budget-planner.html" class="active">Budget Planner</a></li>
+          <li><a href="../blog/index.html">Guides</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Banner Ad Slot -->
+  <div class="container ad-slot-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-placeholder">
+      <span>Google AdSense Responsive Banner Slot (Header Top)</span>
+      <code>&lt;ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-bottom: 3rem;">
+    <div class="section-header">
+      <span class="hero-pill">⚡ Free Financial Utility</span>
+      <h1>50/30/20 Budget Calculator</h1>
+      <p>Divide your net monthly take-home pay into needs, wants, and savings using the time-tested 50/30/20 personal finance framework.</p>
+    </div>
+
+    <!-- Calculator App -->
+    <div class="calc-wrapper">
+      
+      <!-- Inputs -->
+      <div class="calc-inputs">
+        <div class="form-group">
+          <label for="budget-income">Monthly Take-Home Income ($) <span class="hint">After taxes &amp; deductions</span></label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="budget-income" value="4500" min="500" step="100">
+          </div>
+        </div>
+
+        <div style="background:#f8fafc; border:1px solid var(--border); border-radius:8px; padding:1.25rem;">
+          <h4 style="font-size:0.95rem; margin-bottom:0.5rem; color:var(--text-main);">How the 50/30/20 Rule Works:</h4>
+          <ul style="font-size:0.88rem; color:var(--text-muted); margin-left:1.25rem; display:flex; flex-direction:column; gap:0.4rem;">
+            <li><strong>50% Needs:</strong> Rent/mortgage, utilities, groceries, insurance, minimum debt payments.</li>
+            <li><strong>30% Wants:</strong> Dining out, entertainment, hobbies, streaming subscriptions, vacations.</li>
+            <li><strong>20% Savings &amp; Debt:</strong> Emergency fund, retirement accounts, extra debt payoff.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Results Display -->
+      <div class="calc-results">
+        <div>
+          <div class="result-main">
+            <div class="label">Monthly Allocation Breakdown</div>
+            <div class="amount" style="font-size:1.75rem; color:var(--primary);">$4,500 Total</div>
+          </div>
+
+          <div class="result-breakdown" style="gap:1.25rem;">
+            <div style="background:#fff; border:1px solid #e2e8f0; border-left: 5px solid #2563eb; padding:0.85rem; border-radius:6px;">
+              <div style="display:flex; justify-content:space-between; font-weight:700;">
+                <span style="color:#2563eb;">50% Essential Needs</span>
+                <span id="budget-needs">$2,250</span>
+              </div>
+              <small style="color:var(--text-muted);">Housing, food, healthcare, transportation</small>
+            </div>
+
+            <div style="background:#fff; border:1px solid #e2e8f0; border-left: 5px solid #f59e0b; padding:0.85rem; border-radius:6px;">
+              <div style="display:flex; justify-content:space-between; font-weight:700;">
+                <span style="color:#d97706;">30% Discretionary Wants</span>
+                <span id="budget-wants">$1,350</span>
+              </div>
+              <small style="color:var(--text-muted);">Dining out, shopping, hobbies, leisure</small>
+            </div>
+
+            <div style="background:#fff; border:1px solid #e2e8f0; border-left: 5px solid #059669; padding:0.85rem; border-radius:6px;">
+              <div style="display:flex; justify-content:space-between; font-weight:700;">
+                <span style="color:#059669;">20% Savings &amp; Investments</span>
+                <span id="budget-savings">$900</span>
+              </div>
+              <small style="color:var(--text-muted);">Emergency savings, retirement, index funds</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Educational Deep Dive -->
+    <section class="prose" style="max-width:100%; margin-top: 2rem;">
+      <h2>Mastering Your Cash Flow with the 50/30/20 Rule</h2>
+      <p>Popularized by Senator Elizabeth Warren in her book <em>All Your Worth: The Ultimate Lifetime Money Plan</em>, the 50/30/20 rule is celebrated because it does not require micro-tracking every penny you spend on coffee or groceries.</p>
+
+      <h3>Step-by-Step Implementation</h3>
+      <ol>
+        <li><strong>Calculate Net Income:</strong> Look at your actual bank deposits after healthcare, taxes, and automatic deductions have been taken out.</li>
+        <li><strong>Cap Your Fixed Needs at 50%:</strong> If your housing and utilities consume more than 50% of your paycheck, consider refinancing, downsizing, or picking up a side income to balance your budget.</li>
+        <li><strong>Automate Your 20% Savings:</strong> Set up an automatic bank transfer on payday so your $900 savings goes directly into a high-yield savings account or brokerage fund before you have the chance to spend it.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:#fff;">
+            <span class="logo-badge">FW</span> FinWise
+          </div>
+          <p>Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="compound-interest.html">Compound Interest</a></li>
+            <li><a href="loan-calculator.html">Loan & Mortgage EMI</a></li>
+            <li><a href="budget-planner.html">50/30/20 Budget</a></li>
+            <li><a href="retirement-calc.html">Retirement & FIRE</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../blog/index.html">All Guides</a></li>
+            <li><a href="../blog/compound-interest-guide.html">Compound Interest Guide</a></li>
+            <li><a href="../blog/debt-payoff-strategies.html">Debt Payoff Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Trust</h4>
+          <ul>
+            <li><a href="../pages/about.html">About Us</a></li>
+            <li><a href="../pages/contact.html">Contact Us</a></li>
+            <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../pages/terms.html">Terms of Service</a></li>
+            <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> FinWise. All rights reserved.</p>
+        <p>Disclaimer: Financial calculators and guides are for educational purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
+

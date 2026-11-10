@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan & Mortgage EMI Calculator | FinWise</title>
+  <meta name="description" content="Free loan and mortgage EMI calculator. Compute monthly payments, total interest breakdown, and explore full amortization schedules.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-badge">FW</span> FinWise
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="loan-calculator.html" class="active">Loan / EMI</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="../blog/index.html">Guides</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Banner Ad Slot -->
+  <div class="container ad-slot-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-placeholder">
+      <span>Google AdSense Responsive Banner Slot (Header Top)</span>
+      <code>&lt;ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-bottom: 3rem;">
+    <div class="section-header">
+      <span class="hero-pill">⚡ Free Financial Utility</span>
+      <h1>Loan & Mortgage EMI Calculator</h1>
+      <p>Accurately estimate your monthly loan installment (EMI), total interest payments, and multi-year repayment schedule.</p>
+    </div>
+
+    <!-- Calculator App -->
+    <div class="calc-wrapper">
+      
+      <!-- Inputs -->
+      <div class="calc-inputs">
+        <div class="form-group">
+          <label for="loan-amount">Loan / Borrowed Amount ($) <span class="hint">Principal balance</span></label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="loan-amount" value="250000" min="1000" step="5000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="loan-rate">Annual Interest Rate (%) <span class="hint">Fixed mortgage or personal loan rate</span></label>
+          <input type="number" id="loan-rate" value="6.5" min="0.1" max="30" step="0.1">
+        </div>
+
+        <div class="form-group">
+          <label for="loan-term">Loan Term (Years) <span class="hint">Duration of repayment</span></label>
+          <input type="number" id="loan-term" value="30" min="1" max="40">
+        </div>
+      </div>
+
+      <!-- Results Display -->
+      <div class="calc-results">
+        <div>
+          <div class="result-main">
+            <div class="label">Monthly Payment (EMI)</div>
+            <div class="amount" id="loan-monthly-emi">$1,580</div>
+          </div>
+
+          <div class="result-breakdown">
+            <div class="breakdown-row">
+              <span>Total Principal Borrowed:</span>
+              <strong id="loan-total-principal">$250,000</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Total Interest Paid:</span>
+              <strong id="loan-total-interest" style="color:#dc2626;">$318,861</strong>
+            </div>
+            <div class="breakdown-row" style="border-top:1px solid var(--border); padding-top:0.5rem; margin-top:0.25rem;">
+              <span>Total Lifetime Cost:</span>
+              <strong id="loan-total-pay">$568,861</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding: 0.85rem; background:#fff; border-radius:6px; border:1px solid var(--border); font-size:0.85rem; color:var(--text-muted);">
+          ⚠️ <strong>Notice:</strong> On a 30-year loan at 6.5%, total interest paid exceeds the original amount borrowed! Consider making extra principal payments to save thousands.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- In-Content Native Ad Slot -->
+    <div class="ad-slot-wrapper">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-placeholder">
+        <span>Google AdSense In-Article Native Ad Slot</span>
+        <code>&lt;ins class="adsbygoogle" data-ad-layout="in-article" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+      </div>
+    </div>
+
+    <!-- Amortization Schedule Table -->
+    <div style="margin: 2.5rem 0;">
+      <h2 style="font-size:1.4rem; font-weight:700; margin-bottom:1rem;">Amortization Schedule (First 10 Years)</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Period</th>
+              <th>Principal Paid</th>
+              <th>Interest Paid</th>
+              <th>Remaining Balance</th>
+            </tr>
+          </thead>
+          <tbody id="loan-amortization-body">
+            <!-- Dynamically populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Educational Deep Dive -->
+    <section class="prose" style="max-width:100%; margin-top: 2rem;">
+      <h2>Understanding How Amortization Works</h2>
+      <p>When you take out a fixed-rate installment loan (such as a mortgage or auto loan), your monthly payment remains the same, but the distribution between <strong>principal</strong> and <strong>interest</strong> changes dramatically over time.</p>
+      
+      <h3>Front-Loaded Interest Explained</h3>
+      <p>During the early years of your loan, the remaining principal balance is at its highest. As a result, the majority of every monthly payment goes directly toward paying interest to the lender. As the principal drops, progressively more of your payment attacks the principal balance.</p>
+
+      <h3>How to Save Thousands in Loan Interest</h3>
+      <ul>
+        <li><strong>Make Bi-Weekly Payments:</strong> Making half-payments every two weeks results in 26 half-payments per year (equivalent to 13 full payments instead of 12), cutting years off a 30-year mortgage.</li>
+        <li><strong>Round Up Your Monthly Payment:</strong> Adding just $100 or $200 extra directly earmarked for "Principal Only" reduces lifetime interest substantially.</li>
+        <li><strong>Refinance When Rates Drop:</strong> Lowering your interest rate by even 1% can save tens of thousands of dollars over the lifetime of a long-term loan.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:#fff;">
+            <span class="logo-badge">FW</span> FinWise
+          </div>
+          <p>Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="compound-interest.html">Compound Interest</a></li>
+            <li><a href="loan-calculator.html">Loan & Mortgage EMI</a></li>
+            <li><a href="budget-planner.html">50/30/20 Budget</a></li>
+            <li><a href="retirement-calc.html">Retirement & FIRE</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../blog/index.html">All Guides</a></li>
+            <li><a href="../blog/compound-interest-guide.html">Compound Interest Guide</a></li>
+            <li><a href="../blog/debt-payoff-strategies.html">Debt Payoff Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Trust</h4>
+          <ul>
+            <li><a href="../pages/about.html">About Us</a></li>
+            <li><a href="../pages/contact.html">Contact Us</a></li>
+            <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../pages/terms.html">Terms of Service</a></li>
+            <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> FinWise. All rights reserved.</p>
+        <p>Disclaimer: Financial calculators and guides are for educational purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
+

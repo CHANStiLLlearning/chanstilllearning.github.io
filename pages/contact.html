@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | FinWise</title>
+  <meta name="description" content="Get in touch with the FinWise team for questions, calculator feedback, or business inquiries.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-badge">FW</span> FinWise
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../tools/compound-interest.html">Compound Interest</a></li>
+          <li><a href="../tools/loan-calculator.html">Loan / EMI</a></li>
+          <li><a href="../blog/index.html">Guides</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" style="padding: 3.5rem 1.25rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;">
+      
+      <!-- Contact Info -->
+      <div>
+        <span class="badge" style="margin-bottom: 0.75rem; display:inline-block;">We're Here to Help</span>
+        <h1 style="font-size: 2.2rem; font-weight:800; margin-bottom: 1rem; color:var(--text-main);">Get in Touch with FinWise</h1>
+        <p style="color:var(--text-muted); font-size: 1.05rem; margin-bottom: 1.75rem;">
+          Have questions about our financial calculators, spotted a calculation discrepancy, or want to suggest a new feature? We'd love to hear from you.
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="width:40px; height:40px; background:#dbeafe; color:#2563eb; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:bold;">✉</div>
+            <div>
+              <strong style="display:block; color:var(--text-main); font-size:0.95rem;">Email Support</strong>
+              <span style="color:var(--text-muted); font-size:0.9rem;">contact@finwise-example.com</span>
+            </div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="width:40px; height:40px; background:#d1fae5; color:#059669; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:bold;">⏱</div>
+            <div>
+              <strong style="display:block; color:var(--text-main); font-size:0.95rem;">Response Time</strong>
+              <span style="color:var(--text-muted); font-size:0.9rem;">Usually within 24 to 48 hours</span>
+            </div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="width:40px; height:40px; background:#fef3c7; color:#d97706; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:bold;">📍</div>
+            <div>
+              <strong style="display:block; color:var(--text-main); font-size:0.95rem;">Editorial Location</strong>
+              <span style="color:var(--text-muted); font-size:0.9rem;">Digital Financial Research Group</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Card -->
+      <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow-md);">
+        <h2 style="font-size:1.4rem; font-weight:700; margin-bottom:1.25rem;">Send a Message</h2>
+        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="subject">Topic</label>
+            <select id="subject" required>
+              <option value="calculator-feedback">Calculator Feedback / Bug Report</option>
+              <option value="feature-request">Suggest a New Calculator</option>
+              <option value="editorial">Article or Editorial Inquiry</option>
+              <option value="advertising">Advertising & Partnerships</option>
+              <option value="other">General Question</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="How can we assist you today?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+          <div id="form-feedback" style="display:none; margin-top:1rem; padding:0.75rem; border-radius:6px; font-size:0.9rem; text-align:center;"></div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:#fff;">
+            <span class="logo-badge">FW</span> FinWise
+          </div>
+          <p>Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="../tools/compound-interest.html">Compound Interest</a></li>
+            <li><a href="../tools/loan-calculator.html">Loan & Mortgage EMI</a></li>
+            <li><a href="../tools/budget-planner.html">50/30/20 Budget</a></li>
+            <li><a href="../tools/retirement-calc.html">Retirement & FIRE</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../blog/index.html">All Guides</a></li>
+            <li><a href="../blog/compound-interest-guide.html">Compound Interest Guide</a></li>
+            <li><a href="../blog/debt-payoff-strategies.html">Debt Payoff Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Trust</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> FinWise. All rights reserved.</p>
+        <p>Disclaimer: Financial calculators and guides are for educational purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      feedback.style.display = 'block';
+      feedback.style.background = '#d1fae5';
+      feedback.style.color = '#065f46';
+      feedback.textContent = 'Thank you! Your message has been received. Our team will get back to you shortly.';
+      document.getElementById('contact-form').reset();
+    }
+  </script>
+</body>
+</html>
+

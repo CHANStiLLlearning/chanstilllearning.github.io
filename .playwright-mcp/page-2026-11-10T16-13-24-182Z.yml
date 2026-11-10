@@ -1,0 +1,202 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "FW FinWise" [ref=f1e4] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f1e5]: FW
+        - text: FinWise
+      - navigation [ref=f1e6]:
+        - list [ref=f1e7]:
+          - listitem [ref=f1e8]:
+            - link "Home" [ref=f1e9] [cursor=pointer]:
+              - /url: index.html
+          - listitem [ref=f1e10]:
+            - link "Compound Interest" [ref=f1e11] [cursor=pointer]:
+              - /url: tools/compound-interest.html
+          - listitem [ref=f1e12]:
+            - link "Loan / EMI" [ref=f1e13] [cursor=pointer]:
+              - /url: tools/loan-calculator.html
+          - listitem [ref=f1e14]:
+            - link "Budget Planner" [ref=f1e15] [cursor=pointer]:
+              - /url: tools/budget-planner.html
+          - listitem [ref=f1e16]:
+            - link "Guides" [ref=f1e17] [cursor=pointer]:
+              - /url: blog/index.html
+          - listitem [ref=f1e18]:
+            - link "About" [ref=f1e19] [cursor=pointer]:
+              - /url: pages/about.html
+          - listitem [ref=f1e20]:
+            - link "Contact" [ref=f1e21] [cursor=pointer]:
+              - /url: pages/contact.html
+  - generic [ref=f1e22]:
+    - generic [ref=f1e23]: Advertisement
+    - generic [ref=f1e24]:
+      - generic [ref=f1e25]: Google AdSense Leaderboard Slot (728x90 / Responsive)
+      - code [ref=f1e26]: <ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+  - generic [ref=f1e28]:
+    - generic [ref=f1e29]: ✨ 100% Free & Private Financial Calculators
+    - heading "Smart Financial Math for Real Wealth Growth" [level=1] [ref=f1e30]
+    - paragraph [ref=f1e31]: Instant, client-side calculators to project your compound interest, calculate loan payments, master the 50/30/20 budget, and target early retirement.
+    - generic [ref=f1e32]:
+      - link "Start Compound Calculator →" [ref=f1e33] [cursor=pointer]:
+        - /url: tools/compound-interest.html
+      - link "Calculate Loan / EMI" [ref=f1e34] [cursor=pointer]:
+        - /url: tools/loan-calculator.html
+    - generic [ref=f1e35]:
+      - generic [ref=f1e36]:
+        - generic [ref=f1e37]: 100%
+        - generic [ref=f1e38]: Client-Side Privacy
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40]: "0"
+        - generic [ref=f1e41]: Signup Required
+      - generic [ref=f1e42]:
+        - generic [ref=f1e43]: 4+
+        - generic [ref=f1e44]: Interactive Tools
+  - generic [ref=f1e45]:
+    - generic [ref=f1e46]:
+      - heading "Explore Our Free Financial Calculators" [level=2] [ref=f1e47]
+      - paragraph [ref=f1e48]: Precision tools engineered to provide immediate answers for your personal finance decisions.
+    - generic [ref=f1e49]:
+      - generic [ref=f1e50]:
+        - generic [ref=f1e51]:
+          - generic [ref=f1e52]: 📈
+          - heading "Compound Interest Calculator" [level=3] [ref=f1e53]
+          - paragraph [ref=f1e54]: Model the exponential growth of your investments with regular monthly contributions, custom interest rates, and compounding periods.
+        - link "Launch Calculator →" [ref=f1e55] [cursor=pointer]:
+          - /url: tools/compound-interest.html
+      - generic [ref=f1e56]:
+        - generic [ref=f1e57]:
+          - generic [ref=f1e58]: 🏠
+          - heading "Loan & Mortgage EMI Calculator" [level=3] [ref=f1e59]
+          - paragraph [ref=f1e60]: Calculate your exact monthly payments and total interest cost. View complete amortization schedules for mortgages, auto loans, and personal loans.
+        - link "Launch Calculator →" [ref=f1e61] [cursor=pointer]:
+          - /url: tools/loan-calculator.html
+      - generic [ref=f1e62]:
+        - generic [ref=f1e63]:
+          - generic [ref=f1e64]: 📊
+          - heading "50/30/20 Monthly Budget Planner" [level=3] [ref=f1e65]
+          - paragraph [ref=f1e66]: Organize your net salary into essential needs (50%), discretionary wants (30%), and future savings & debt paydown (20%).
+        - link "Launch Calculator →" [ref=f1e67] [cursor=pointer]:
+          - /url: tools/budget-planner.html
+      - generic [ref=f1e68]:
+        - generic [ref=f1e69]:
+          - generic [ref=f1e70]: 🎯
+          - heading "Retirement & FIRE Calculator" [level=3] [ref=f1e71]
+          - paragraph [ref=f1e72]: Determine your Financial Independence number based on the 4% safe withdrawal rule and the Rule of 25. Plan your retirement date.
+        - link "Launch Calculator →" [ref=f1e73] [cursor=pointer]:
+          - /url: tools/retirement-calc.html
+  - generic [ref=f1e74]:
+    - generic [ref=f1e75]: Advertisement
+    - generic [ref=f1e76]:
+      - generic [ref=f1e77]: Google AdSense In-Feed Responsive Unit
+      - code [ref=f1e78]: <ins class="adsbygoogle" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"></ins>
+  - generic [ref=f1e79]:
+    - generic [ref=f1e80]:
+      - generic [ref=f1e81]:
+        - heading "Latest Wealth & Finance Guides" [level=2] [ref=f1e82]
+        - paragraph [ref=f1e83]: In-depth, data-backed articles designed to elevate your financial intelligence.
+      - link "View All Guides →" [ref=f1e84] [cursor=pointer]:
+        - /url: blog/index.html
+    - generic [ref=f1e85]:
+      - article [ref=f1e86]:
+        - generic [ref=f1e87]:
+          - generic [ref=f1e88]:
+            - generic [ref=f1e89]: Investing
+            - generic [ref=f1e90]: 8 min read
+          - heading [level=3] [ref=f1e91]:
+            - link "The Exponential Power of Compound Interest" [ref=f1e92] [cursor=pointer]:
+              - /url: blog/compound-interest-guide.html
+          - paragraph [ref=f1e93]: Understand how time in the market beats timing the market, and why starting 10 years earlier yields a massive difference.
+          - link "Read Guide →" [ref=f1e94] [cursor=pointer]:
+            - /url: blog/compound-interest-guide.html
+      - article [ref=f1e95]:
+        - generic [ref=f1e96]:
+          - generic [ref=f1e97]:
+            - generic [ref=f1e98]: Debt
+            - generic [ref=f1e99]: 7 min read
+          - heading [level=3] [ref=f1e100]:
+            - link "Debt Snowball vs. Debt Avalanche Explained" [ref=f1e101] [cursor=pointer]:
+              - /url: blog/debt-payoff-strategies.html
+          - paragraph [ref=f1e102]: Compare behavioral psychology against pure mathematical efficiency to choose your optimal debt payoff roadmap.
+          - link "Read Guide →" [ref=f1e103] [cursor=pointer]:
+            - /url: blog/debt-payoff-strategies.html
+      - article [ref=f1e104]:
+        - generic [ref=f1e105]:
+          - generic [ref=f1e106]:
+            - generic [ref=f1e107]: Passive Income
+            - generic [ref=f1e108]: 10 min read
+          - heading [level=3] [ref=f1e109]:
+            - link "7 Realistic Passive Income Streams Ranked" [ref=f1e110] [cursor=pointer]:
+              - /url: blog/passive-income-streams.html
+          - paragraph [ref=f1e111]: A practical breakdown of genuine passive income models without the internet hype. Capital vs effort analyzed.
+          - link "Read Guide →" [ref=f1e112] [cursor=pointer]:
+            - /url: blog/passive-income-streams.html
+  - generic [ref=f1e114]:
+    - heading "Built for Accuracy and Privacy" [level=2] [ref=f1e115]
+    - paragraph [ref=f1e116]: Unlike other finance portals, we do not require you to link bank accounts, sign up with personal data, or pay recurring subscription fees.
+    - generic [ref=f1e117]:
+      - generic [ref=f1e118]:
+        - heading "🔒 Private By Design" [level=4] [ref=f1e119]
+        - paragraph [ref=f1e120]: Calculators execute natively inside your browser. Your financial figures are never transmitted to our servers or saved anywhere.
+      - generic [ref=f1e121]:
+        - heading "⚡ Instant & Responsive" [level=4] [ref=f1e122]
+        - paragraph [ref=f1e123]: Lightweight code optimized for lightning-fast mobile and desktop performance without bloated JavaScript libraries.
+      - generic [ref=f1e124]:
+        - heading "📖 Verified Educational Guides" [level=4] [ref=f1e125]
+        - paragraph [ref=f1e126]: Every article is crafted with clear formulas, real-world examples, and independent research you can verify.
+  - contentinfo [ref=f1e127]:
+    - generic [ref=f1e128]:
+      - generic [ref=f1e129]:
+        - generic [ref=f1e130]:
+          - generic [ref=f1e131]:
+            - generic [ref=f1e132]: FW
+            - text: FinWise
+          - paragraph [ref=f1e133]: Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.
+        - generic [ref=f1e134]:
+          - heading "Calculators" [level=4] [ref=f1e135]
+          - list [ref=f1e136]:
+            - listitem [ref=f1e137]:
+              - link "Compound Interest" [ref=f1e138] [cursor=pointer]:
+                - /url: tools/compound-interest.html
+            - listitem [ref=f1e139]:
+              - link "Loan & Mortgage EMI" [ref=f1e140] [cursor=pointer]:
+                - /url: tools/loan-calculator.html
+            - listitem [ref=f1e141]:
+              - link "50/30/20 Budget" [ref=f1e142] [cursor=pointer]:
+                - /url: tools/budget-planner.html
+            - listitem [ref=f1e143]:
+              - link "Retirement & FIRE" [ref=f1e144] [cursor=pointer]:
+                - /url: tools/retirement-calc.html
+        - generic [ref=f1e145]:
+          - heading "Resources" [level=4] [ref=f1e146]
+          - list [ref=f1e147]:
+            - listitem [ref=f1e148]:
+              - link "All Guides" [ref=f1e149] [cursor=pointer]:
+                - /url: blog/index.html
+            - listitem [ref=f1e150]:
+              - link "Compound Interest Guide" [ref=f1e151] [cursor=pointer]:
+                - /url: blog/compound-interest-guide.html
+            - listitem [ref=f1e152]:
+              - link "Debt Payoff Guide" [ref=f1e153] [cursor=pointer]:
+                - /url: blog/debt-payoff-strategies.html
+        - generic [ref=f1e154]:
+          - heading "Legal & Trust" [level=4] [ref=f1e155]
+          - list [ref=f1e156]:
+            - listitem [ref=f1e157]:
+              - link "About Us" [ref=f1e158] [cursor=pointer]:
+                - /url: pages/about.html
+            - listitem [ref=f1e159]:
+              - link "Contact Us" [ref=f1e160] [cursor=pointer]:
+                - /url: pages/contact.html
+            - listitem [ref=f1e161]:
+              - link "Privacy Policy" [ref=f1e162] [cursor=pointer]:
+                - /url: pages/privacy-policy.html
+            - listitem [ref=f1e163]:
+              - link "Terms of Service" [ref=f1e164] [cursor=pointer]:
+                - /url: pages/terms.html
+            - listitem [ref=f1e165]:
+              - link "Disclaimer" [ref=f1e166] [cursor=pointer]:
+                - /url: pages/disclaimer.html
+      - generic [ref=f1e167]:
+        - paragraph [ref=f1e168]: © 2026 FinWise. All rights reserved.
+        - paragraph [ref=f1e169]: "Disclaimer: Financial calculators and guides are for educational purposes only."

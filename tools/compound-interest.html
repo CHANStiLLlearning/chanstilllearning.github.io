@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Calculator | FinWise</title>
+  <meta name="description" content="Calculate the future value of your investments with our free compound interest calculator. Visualize monthly contributions, interest growth, and annual breakdown.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-badge">FW</span> FinWise
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="compound-interest.html" class="active">Compound Interest</a></li>
+          <li><a href="loan-calculator.html">Loan / EMI</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="../blog/index.html">Guides</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Banner Ad Slot -->
+  <div class="container ad-slot-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-placeholder">
+      <span>Google AdSense Responsive Banner Slot (Header Top)</span>
+      <code>&lt;ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-bottom: 3rem;">
+    <div class="section-header">
+      <span class="hero-pill">⚡ Free Financial Utility</span>
+      <h1>Compound Interest Calculator</h1>
+      <p>Project your wealth accumulation over time with regular monthly contributions and compound interest.</p>
+    </div>
+
+    <!-- Calculator App -->
+    <div class="calc-wrapper">
+      
+      <!-- Inputs -->
+      <div class="calc-inputs">
+        <div class="form-group">
+          <label for="ci-initial">Initial Investment / Principal ($) <span class="hint">Starting balance</span></label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="ci-initial" value="5000" min="0" step="100">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="ci-monthly">Monthly Contribution ($) <span class="hint">Regular addition</span></label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="ci-monthly" value="300" min="0" step="25">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="ci-years">Investment Period (Years) <span class="hint">Time horizon</span></label>
+          <input type="number" id="ci-years" value="20" min="1" max="50">
+        </div>
+
+        <div class="form-group">
+          <label for="ci-rate">Estimated Annual Interest Rate (%) <span class="hint">e.g. S&amp;P 500 average ~8%</span></label>
+          <input type="number" id="ci-rate" value="8.0" min="0.1" max="30" step="0.1">
+        </div>
+
+        <div class="form-group">
+          <label for="ci-frequency">Compounding Frequency</label>
+          <select id="ci-frequency">
+            <option value="12" selected>Monthly (Most common)</option>
+            <option value="1">Annually</option>
+            <option value="4">Quarterly</option>
+            <option value="365">Daily</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Results Display -->
+      <div class="calc-results">
+        <div>
+          <div class="result-main">
+            <div class="label">Future Investment Value</div>
+            <div class="amount" id="ci-total-balance">$192,863</div>
+          </div>
+
+          <div id="ci-chart-bar"></div>
+
+          <div class="result-breakdown">
+            <div class="breakdown-row">
+              <span>Total Principal Contributed:</span>
+              <strong id="ci-total-deposits">$77,000</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Total Compound Interest Earned:</span>
+              <strong id="ci-total-interest" style="color:var(--secondary);">$115,863</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding: 0.85rem; background:#fff; border-radius:6px; border:1px solid var(--border); font-size:0.85rem; color:var(--text-muted);">
+          💡 <strong>Key Takeaway:</strong> Over 20 years, your compound interest earnings exceed the money you personally deposited!
+        </div>
+      </div>
+
+    </div>
+
+    <!-- In-Content Native Ad Slot -->
+    <div class="ad-slot-wrapper">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-placeholder">
+        <span>Google AdSense In-Article Native Ad Slot</span>
+        <code>&lt;ins class="adsbygoogle" data-ad-layout="in-article" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"&gt;&lt;/ins&gt;</code>
+      </div>
+    </div>
+
+    <!-- Annual Breakdown Table -->
+    <div style="margin: 2.5rem 0;">
+      <h2 style="font-size:1.4rem; font-weight:700; margin-bottom:1rem;">Annual Growth Schedule</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Total Deposits</th>
+              <th>Interest Accrued</th>
+              <th>End-of-Year Balance</th>
+            </tr>
+          </thead>
+          <tbody id="ci-table-body">
+            <!-- Dynamically populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Educational Deep Dive (Crucial for AdSense Approval & SEO Ranking) -->
+    <section class="prose" style="max-width:100%; margin-top: 2rem;">
+      <h2>How Does Compound Interest Work?</h2>
+      <p>Compound interest is the interest you earn on both your original money and on the interest you accumulate over time. Often dubbed the "eighth wonder of the world," compounding allows an investment portfolio to grow exponentially rather than linearly.</p>
+      
+      <h3>The Compound Interest Formula</h3>
+      <p>The standard mathematical equation used to calculate future value with compounding is:</p>
+      <div class="callout">
+        <strong>Formula:</strong>
+        <code>A = P (1 + r/n)^(nt)</code>
+        <br><br>
+        Where:
+        <ul>
+          <li><strong>A</strong> = The future value of the investment, including interest.</li>
+          <li><strong>P</strong> = The initial principal balance.</li>
+          <li><strong>r</strong> = The annual nominal interest rate (as a decimal).</li>
+          <li><strong>n</strong> = The number of times interest compounds per year.</li>
+          <li><strong>t</strong> = The number of years the money is invested.</li>
+        </ul>
+      </div>
+
+      <h3>Why Time in the Market Matters Most</h3>
+      <p>The most important variable in the compound interest formula is not the money you start with—it is <strong>time (t)</strong>. Because time is in the exponent, starting to save just 5 or 10 years earlier dramatically increases your total nest egg without requiring you to deposit more cash.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:#fff;">
+            <span class="logo-badge">FW</span> FinWise
+          </div>
+          <p>Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="compound-interest.html">Compound Interest</a></li>
+            <li><a href="loan-calculator.html">Loan & Mortgage EMI</a></li>
+            <li><a href="budget-planner.html">50/30/20 Budget</a></li>
+            <li><a href="retirement-calc.html">Retirement & FIRE</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../blog/index.html">All Guides</a></li>
+            <li><a href="../blog/compound-interest-guide.html">Compound Interest Guide</a></li>
+            <li><a href="../blog/debt-payoff-strategies.html">Debt Payoff Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Trust</h4>
+          <ul>
+            <li><a href="../pages/about.html">About Us</a></li>
+            <li><a href="../pages/contact.html">Contact Us</a></li>
+            <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../pages/terms.html">Terms of Service</a></li>
+            <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> FinWise. All rights reserved.</p>
+        <p>Disclaimer: Financial calculators and guides are for educational purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,148 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - link "FW FinWise" [ref=f3e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=f3e5]: FW
+        - text: FinWise
+      - navigation [ref=f3e6]:
+        - list [ref=f3e7]:
+          - listitem [ref=f3e8]:
+            - link "Home" [ref=f3e9] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=f3e10]:
+            - link "Compound Interest" [ref=f3e11] [cursor=pointer]:
+              - /url: ../tools/compound-interest.html
+          - listitem [ref=f3e12]:
+            - link "Loan / EMI" [ref=f3e13] [cursor=pointer]:
+              - /url: ../tools/loan-calculator.html
+          - listitem [ref=f3e14]:
+            - link "Guides" [ref=f3e15] [cursor=pointer]:
+              - /url: ../blog/index.html
+          - listitem [ref=f3e16]:
+            - link "About" [ref=f3e17] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=f3e18]:
+            - link "Contact" [ref=f3e19] [cursor=pointer]:
+              - /url: contact.html
+  - main [ref=f3e20]:
+    - article [ref=f3e21]:
+      - heading "Privacy Policy" [level=1] [ref=f3e22]
+      - generic [ref=f3e23]:
+        - generic [ref=f3e24]: "Last Updated: November 2026"
+        - generic [ref=f3e25]: •
+        - generic [ref=f3e26]: "Reading Time: 4 mins"
+      - paragraph [ref=f3e27]:
+        - text: At
+        - strong [ref=f3e28]: FinWise
+        - text: (accessible from our website), the privacy of our visitors is of paramount importance to us. This Privacy Policy document outlines the types of information that is collected and recorded by FinWise and how we use it.
+      - heading "1. Information We Collect" [level=2] [ref=f3e29]
+      - paragraph [ref=f3e30]: "When you visit FinWise or use our interactive financial calculators, we prioritize your data privacy:"
+      - list [ref=f3e31]:
+        - listitem [ref=f3e32]:
+          - strong [ref=f3e33]: "Client-Side Calculations:"
+          - text: Any financial values, numbers, or inputs you type into our calculators (e.g. loan amounts, interest rates, salary figures) are processed entirely inside your web browser. We do not store or transmit these financial figures to any external database.
+        - listitem [ref=f3e34]:
+          - strong [ref=f3e35]: "Log Files:"
+          - text: Like most standard website servers, FinWise utilizes log files. These include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamps, referring/exit pages, and number of clicks. This data is not linked to any personally identifiable information.
+        - listitem [ref=f3e36]:
+          - strong [ref=f3e37]: "Contact Form:"
+          - text: If you reach out to us via our Contact Us form, we receive your name and email address solely to answer your questions. We never sell or distribute your email address to third parties.
+      - heading "2. Cookies and Web Beacons" [level=2] [ref=f3e38]
+      - paragraph [ref=f3e39]: FinWise uses cookies to store information about visitors' preferences, to record user-specific information on which pages the visitor accesses or visits, and to customize our web page content based on visitors' browser type or other information.
+      - heading "3. Google DoubleClick DART Cookie & Google AdSense" [level=2] [ref=f3e40]
+      - generic [ref=f3e41]:
+        - strong [ref=f3e42]: Important Google AdSense Disclosure
+        - text: Google is one of the third-party vendors on our site. It uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet.
+      - paragraph [ref=f3e43]:
+        - text: "Visitors may choose to decline the use of DART cookies by visiting the Google Ad and Content Network Privacy Policy at the following URL:"
+        - link "https://policies.google.com/technologies/ads" [ref=f3e44] [cursor=pointer]:
+          - /url: https://policies.google.com/technologies/ads
+        - text: .
+      - heading "4. Third-Party Advertisers & Advertising Partners" [level=2] [ref=f3e45]
+      - paragraph [ref=f3e46]: "Some of the advertisers on our site may use cookies and web beacons. Our advertising partners include:"
+      - list [ref=f3e47]:
+        - listitem [ref=f3e48]:
+          - strong [ref=f3e49]: Google AdSense
+          - text: "(Privacy Policy:"
+          - link "https://policies.google.com/privacy" [ref=f3e50] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy
+          - text: )
+      - paragraph [ref=f3e51]: Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on FinWise, which are sent directly to users' browsers. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
+      - paragraph [ref=f3e52]: Note that FinWise has no access to or control over these cookies that are used by third-party advertisers.
+      - heading "5. CCPA Privacy Rights (Do Not Sell My Personal Information)" [level=2] [ref=f3e53]
+      - paragraph [ref=f3e54]: Under the California Consumer Privacy Act (CCPA), among other rights, California consumers have the right to request disclosure of categories and specific pieces of personal data collected, request deletion of data, and request that a business not sell the consumer's personal data.
+      - heading "6. GDPR Data Protection Rights" [level=2] [ref=f3e55]
+      - paragraph [ref=f3e56]: "Every user is entitled to the following rights under the General Data Protection Regulation (GDPR):"
+      - list [ref=f3e57]:
+        - listitem [ref=f3e58]: The right to access – You have the right to request copies of your personal data.
+        - listitem [ref=f3e59]: The right to rectification – You have the right to request that we correct any information you believe is inaccurate.
+        - listitem [ref=f3e60]: The right to erasure – You have the right to request that we erase your personal data under certain conditions.
+      - heading "7. Children's Information" [level=2] [ref=f3e61]
+      - paragraph [ref=f3e62]: FinWise does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will promptly remove such information from our records.
+      - heading "8. Consent" [level=2] [ref=f3e63]
+      - paragraph [ref=f3e64]: By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+      - heading "9. Contact Information" [level=2] [ref=f3e65]
+      - paragraph [ref=f3e66]:
+        - text: If you have additional questions or require more information about our Privacy Policy, please visit our
+        - link "Contact Us" [ref=f3e67] [cursor=pointer]:
+          - /url: contact.html
+        - text: page or email us directly at
+        - code [ref=f3e68]: privacy@finwise-example.com
+        - text: .
+  - contentinfo [ref=f3e69]:
+    - generic [ref=f3e70]:
+      - generic [ref=f3e71]:
+        - generic [ref=f3e72]:
+          - generic [ref=f3e73]:
+            - generic [ref=f3e74]: FW
+            - text: FinWise
+          - paragraph [ref=f3e75]: Empowering individuals with free, accurate financial calculators and actionable wealth-building guides.
+        - generic [ref=f3e76]:
+          - heading "Calculators" [level=4] [ref=f3e77]
+          - list [ref=f3e78]:
+            - listitem [ref=f3e79]:
+              - link "Compound Interest" [ref=f3e80] [cursor=pointer]:
+                - /url: ../tools/compound-interest.html
+            - listitem [ref=f3e81]:
+              - link "Loan & Mortgage EMI" [ref=f3e82] [cursor=pointer]:
+                - /url: ../tools/loan-calculator.html
+            - listitem [ref=f3e83]:
+              - link "50/30/20 Budget" [ref=f3e84] [cursor=pointer]:
+                - /url: ../tools/budget-planner.html
+            - listitem [ref=f3e85]:
+              - link "Retirement & FIRE" [ref=f3e86] [cursor=pointer]:
+                - /url: ../tools/retirement-calc.html
+        - generic [ref=f3e87]:
+          - heading "Resources" [level=4] [ref=f3e88]
+          - list [ref=f3e89]:
+            - listitem [ref=f3e90]:
+              - link "All Guides" [ref=f3e91] [cursor=pointer]:
+                - /url: ../blog/index.html
+            - listitem [ref=f3e92]:
+              - link "Compound Interest Guide" [ref=f3e93] [cursor=pointer]:
+                - /url: ../blog/compound-interest-guide.html
+            - listitem [ref=f3e94]:
+              - link "Debt Payoff Guide" [ref=f3e95] [cursor=pointer]:
+                - /url: ../blog/debt-payoff-strategies.html
+        - generic [ref=f3e96]:
+          - heading "Legal & Trust" [level=4] [ref=f3e97]
+          - list [ref=f3e98]:
+            - listitem [ref=f3e99]:
+              - link "About Us" [ref=f3e100] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f3e101]:
+              - link "Contact Us" [ref=f3e102] [cursor=pointer]:
+                - /url: contact.html
+            - listitem [ref=f3e103]:
+              - link "Privacy Policy" [ref=f3e104] [cursor=pointer]:
+                - /url: privacy-policy.html
+            - listitem [ref=f3e105]:
+              - link "Terms of Service" [ref=f3e106] [cursor=pointer]:
+                - /url: terms.html
+            - listitem [ref=f3e107]:
+              - link "Disclaimer" [ref=f3e108] [cursor=pointer]:
+                - /url: disclaimer.html
+      - generic [ref=f3e109]:
+        - paragraph [ref=f3e110]: © 2026 FinWise. All rights reserved.
+        - paragraph [ref=f3e111]: "Disclaimer: Financial calculators and guides are for educational purposes only."
