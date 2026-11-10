@@ -1,8 +1,15 @@
-# Environment & temp files
+# Playwright & MCP test logs
+.playwright*/
 .playwright-mcp/
-node_modules/
 *.log
+
+# Temporary archives & screenshots
+*.zip
+zip-base64.txt
 screenshot*.png
+node_modules/
+
+# OS files
 .DS_Store
 Thumbs.db
 

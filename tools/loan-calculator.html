@@ -6,6 +6,61 @@
   <title>Loan & Mortgage EMI Calculator | FinWise</title>
   <meta name="description" content="Free loan and mortgage EMI calculator. Compute monthly payments, total interest breakdown, and explore full amortization schedules.">
   <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="Loan & Mortgage EMI Calculator | FinWise">
+  <meta property="og:description" content="Calculate your exact monthly payments and total interest cost with interactive multi-year loan amortization schedules.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chanstilllearning.github.io/finwise/tools/loan-calculator.html">
+
+  <!-- Schema.org Structured Data (Google Rich Snippets & FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "FinWise Loan and Mortgage EMI Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is a monthly loan EMI calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EMI is calculated using the formula EMI = [P x R x (1+R)^N] / [(1+R)^N - 1], where P is principal, R is the monthly interest rate, and N is the total number of monthly payments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is interest front-loaded in amortization?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because the remaining principal loan balance is largest during the early years, the monthly interest charge is highest. Over time, as principal drops, less interest accrues and more of each payment pays off the principal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I reduce my total mortgage interest?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Making bi-weekly payments, paying extra directly toward principal each month, or refinancing to a lower interest rate can save tens of thousands of dollars in lifetime interest charges."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
