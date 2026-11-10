@@ -243,6 +243,61 @@ function calculateRetirement() {
   }
 }
 
+/* ==========================================================================
+   5. Inflation & Purchasing Power Calculator
+   ========================================================================== */
+function calculateInflation() {
+  const currentAmount = parseFloat(document.getElementById("inf-amount")?.value) || 0;
+  const inflationRate = (parseFloat(document.getElementById("inf-rate")?.value) || 0) / 100;
+  const years = parseFloat(document.getElementById("inf-years")?.value) || 0;
+
+  if (currentAmount <= 0 || years <= 0) return;
+
+  // Future price of same basket of goods
+  const futureCost = currentAmount * Math.pow(1 + inflationRate, years);
+
+  // Future purchasing power of current dollar amount
+  const futurePurchasingPower = currentAmount / Math.pow(1 + inflationRate, years);
+  const purchasingPowerLossPercent = Math.round((1 - futurePurchasingPower / currentAmount) * 100);
+
+  // Update DOM
+  const futureCostEl = document.getElementById("inf-future-cost");
+  const powerEl = document.getElementById("inf-purchasing-power");
+  const lossPercentEl = document.getElementById("inf-loss-percent");
+
+  if (futureCostEl) futureCostEl.textContent = formatCurrency(futureCost);
+  if (powerEl) powerEl.textContent = formatCurrency(futurePurchasingPower);
+  if (lossPercentEl) lossPercentEl.textContent = `${purchasingPowerLossPercent}%`;
+
+  // Render Table Breakdown
+  renderInflationTable(currentAmount, inflationRate, years);
+}
+
+function renderInflationTable(initialAmount, rate, totalYears) {
+  const tbody = document.getElementById("inf-table-body");
+  if (!tbody) return;
+
+  let rowsHtml = "";
+  const maxYears = Math.min(25, totalYears);
+
+  for (let y = 1; y <= maxYears; y++) {
+    const costAtYear = initialAmount * Math.pow(1 + rate, y);
+    const powerAtYear = initialAmount / Math.pow(1 + rate, y);
+    const lossPct = Math.round((1 - powerAtYear / initialAmount) * 100);
+
+    rowsHtml += `
+      <tr>
+        <td>Year ${y}</td>
+        <td><strong>${formatCurrency(costAtYear)}</strong></td>
+        <td>${formatCurrency(powerAtYear)}</td>
+        <td style="color:#dc2626; font-weight:600;">-${lossPct}%</td>
+      </tr>
+    `;
+  }
+
+  tbody.innerHTML = rowsHtml;
+}
+
 // Global Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   // Bind Compound Interest
@@ -275,5 +330,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el) el.addEventListener("input", calculateRetirement);
   });
   if (document.getElementById("fire-age")) calculateRetirement();
+
+  // Bind Inflation
+  const infInputs = ["inf-amount", "inf-rate", "inf-years"];
+  infInputs.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", calculateInflation);
+  });
+  if (document.getElementById("inf-amount")) calculateInflation();
 });
 
