@@ -89,7 +89,7 @@ You need to host this website on the public internet with a custom domain before
 3. Enter your website URL.
 4. Copy your unique **AdSense code snippet**:
    ```html
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9673621154487295" crossorigin="anonymous"></script>
    ```
 5. Paste it into the `<head>` of `index.html` and the other HTML files (there are labeled placeholders ready for you).
 6. Update `ads.txt` with your `pub-XXXXXXXXXXXXXXXX` publisher ID.
