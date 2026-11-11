@@ -2,106 +2,129 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Interactive Calculators -->
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/tools/compound-interest.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/tools/compound-interest.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/tools/loan-calculator.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/tools/loan-calculator.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/tools/budget-planner.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/tools/auto-loan.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chanstilllearning.github.io/tools/budget-planner.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/tools/retirement-calc.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/tools/retirement-calc.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/tools/inflation-calc.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/tools/inflation-calc.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Guides & Articles -->
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/blog/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/blog/</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/blog/compound-interest-guide.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/blog/index-funds-investing.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chanstilllearning.github.io/blog/high-yield-savings-guide.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chanstilllearning.github.io/blog/credit-score-repair-guide.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chanstilllearning.github.io/blog/compound-interest-guide.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/blog/debt-payoff-strategies.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/blog/debt-payoff-strategies.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/blog/emergency-fund-guide.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/blog/emergency-fund-guide.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/blog/passive-income-streams.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/blog/passive-income-streams.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Legal & Trust Pages -->
+  <!-- Legal & Static Pages -->
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/pages/about.html</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://chanstilllearning.github.io/pages/privacy-policy.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/pages/contact.html</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://chanstilllearning.github.io/pages/terms.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/pages/privacy-policy.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/pages/disclaimer.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://chanstilllearning.github.io/pages/about.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://chanstilllearning.github.io/finwise/pages/terms.html</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://chanstilllearning.github.io/finwise/pages/disclaimer.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://chanstilllearning.github.io/pages/contact.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>
-
