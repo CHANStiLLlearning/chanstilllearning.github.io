@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://chanstilllearning.github.io/finwise/sitemap.xml
-
+Sitemap: https://chanstilllearning.github.io/sitemap.xml
